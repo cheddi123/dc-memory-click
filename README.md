@@ -1,1 +1,1 @@
-DC memory click
+DC memory clicky 
