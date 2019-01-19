@@ -2,7 +2,7 @@
   "name": "dc_memory_click",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://cheddi123.github.io/dc-memory-click",
+  "homepage": "https://cheddi123.github.io/dc-memory-click",
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
