@@ -3,11 +3,11 @@
 
 const Images= [
 {   id:1,
-    img:"https://oyster.ignimgs.com/wordpress/stg.ign.com/2013/11/17-Supergirl.jpg",
+    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO_fENWbvzs7ZRjXveE68Z6um7TBHPglpLvUnS9p_cKGbpgx94PA",
     isClicked:false
 },
 {   id:2,
-    img:"http://www.cheatsheet.com/wp-content/uploads/2016/09/booster-gold-e1473354674858.jpg",
+    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLjKrtLvSjy_ZvU1pJu2VJaOq3RMJVoVGyqrkoxHz1lAJtoX5oSg",
     isClicked:false
 },
 {   id:3,

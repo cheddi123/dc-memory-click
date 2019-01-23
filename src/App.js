@@ -23,59 +23,61 @@ class App extends React.Component {
     topScore: 0,
     clickedImage: [],
     Images,
-    message: "",
+    message: "Click the image",
   };
 
-  
+
   handleClick = id => {
+
+    const newScore = this.state.count + 1
     if (this.state.clickedImage.indexOf(id) === -1) {
-      this.handleIncrement();
-      this.setState({ clickedImage: this.state.clickedImage.concat(id) });
-      console.log(id)
-      console.log(this.state.clickedImage.indexOf(id))
-    } else {
-      this.Reset();
-      console.log(id)
-      console.log(this.state.clickedImage.indexOf(id))
+      if (newScore === 8) {
+        this.Reset()
 
+        console.log(this.state.message)
+        // this.Reset()
+      }
+      else if (newScore < 8) {
+        this.setState({
+          clickedImage: this.state.clickedImage.concat(id),
+          count: newScore,
+          topScore: (this.state.count >= this.state.topScore) ? newScore : this.state.topScore,
+          message: "Correct guess"
+        });
+
+        console.log("The  score is  " + this.state.count)
+        console.log("The  topscore is  " + this.state.topScore)
+
+        console.log("The  image id is " + id)
+        // console.log(this.state.clickedImage.indexOf(id))
+      }
     }
-  };
-
-
-
-  // handleIncrement increments this.state.count by 1
-  handleIncrement = () => {
-    const newScore = this.state.count + 1;
-    // the setState method to update a component's state
-    this.setState({
-      count: newScore,
-      isClicked: this.state.clickedImage
-    });
-    if (newScore >= this.state.topScore) {
-      this.setState({ 
-        topScore: newScore ,
-        message: "Correct guess" 
+    else {
+      this.setState({
+        count: 0,
+        topScore: this.state.topScore,
+        clickedImage: [],
+        message: "Incorrect ",
       });
-      console.log(this.state.message)
-    }
-     if (newScore === Images.length) {
-      this.setState({ message: "You win! Click  to play again " });
-      console.log(this.state.message)
-    }
-     else{this.handleShuffle();
-    //  console.log(Images.length)
 
+      console.log("you already clicked image id " + id)
+      console.log("the count is " + this.state.count)
+      console.log("the topscore is " + this.state.topScore)
+
+    }
+
+    this.handleShuffle();
   };
-}
- // reset the game back to score zero
+
+  // reset the game back to score zero
   Reset = () => {
     this.setState({
       count: 0,
-      topScore: this.state.topScore,
+      topScore: 0,
       clickedImage: [],
-      message: "",
+      message: "You win . Click to play again ",
     });
-    this.handleShuffle();
+    // this.handleShuffle();
   };
 
   // function to invoke the shuffleImages function 
@@ -84,12 +86,12 @@ class App extends React.Component {
     this.setState({ Images: rearrangedImages });
   };
 
-
+  //
   // The render method returns the JSX that should be rendered
   render() {
 
     return (
-      <Wrapper>
+      <Wrapper >
         <div className="card text-center">
           <Header
             count={this.state.count}
@@ -101,27 +103,26 @@ class App extends React.Component {
           </div>
 
         </div>
-        <div className="container"> 
-        {this.state.Images.map((image) => (
+        <div className="container">
+          {this.state.Images.map((image) => (
 
-          <span className="container padding " key={image.id}>
+            <span className="container padding " key={image.id}>
 
-            <button className="btn btn-danger grow padding"  >{""}
-              <Bodys
-                key={image.id}
-                photo={image.img}
-                id={image.id}
-                handleClick={this.handleClick}
-                // handleIncrement={this.handleIncrement}
-                // handleReset={this.Reset}
-                // handleShuffle={this.handleShuffle}
-              />
+              <button className="btn btn-danger grow padding"  >{""}
 
-            </button>
+                <Bodys
+                  key={image.id}
+                  photo={image.img}
+                  id={image.id}
+                  handleClick={this.handleClick}
 
-          </span>
+                />
 
-        ))}
+              </button>
+
+            </span>
+
+          ))}
         </div>
       </Wrapper>
     );

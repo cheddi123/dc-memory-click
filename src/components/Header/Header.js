@@ -4,7 +4,7 @@ import "./style.css"
 
 function Header(props) {
     return (
-        <header className="jumbotron bg-info text-white " >
+        <header className="jumbotron bg-info text-white p-0 " >
             <div className="row text">
                 <div className="col-4 font-weight-bold "><span>DC Clicky Game</span></div>
                 <h1  className="col-4 message"> {props.alertMessage} </h1>
