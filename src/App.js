@@ -31,13 +31,13 @@ class App extends React.Component {
 
     const newScore = this.state.count + 1
     if (this.state.clickedImage.indexOf(id) === -1) {
-      if (newScore === 8) {
+      if (newScore === Images.length) {
         this.Reset()
 
         console.log(this.state.message)
         // this.Reset()
       }
-      else if (newScore < 8) {
+      else if (newScore < Images.length) {
         this.setState({
           clickedImage: this.state.clickedImage.concat(id),
           count: newScore,
