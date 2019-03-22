@@ -11,7 +11,7 @@ const Images= [
     isClicked:false
 },
 {   id:3,
-    img:"https://www.dckids.com/Portals/2/Content/Hero/HeroDCSFCyborg/Source/Default/dc-hero-dcsf-cyborg.png",
+    img:"/img/ironman.jpg",
     isClicked:false
 },
 {   id:4,
@@ -27,7 +27,7 @@ const Images= [
     isClicked:false
 },
 {   id:7,
-    img:"http://townsquare.media/site/622/files/2013/02/32-sodam-yat-by-patrickgleason.jpg",
+    img:"/img/hulk.jpg",
     isClicked:false
 },
 {   id:8,
