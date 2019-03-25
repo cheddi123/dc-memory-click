@@ -7,7 +7,7 @@ function Header(props) {
         <header className="jumbotron bg-info text-white p-0 m-0 fixed-top" >
             <div className="row text">
                 <div className="col-4 font-weight-bold "><span>DC Clicky Game</span></div>
-                <h1  className="col-4 message"> {props.alertMessage} </h1>
+                <h1  className="col-4 message "> {props.alertMessage} </h1>
                 <div className="col-2"> <span>Score: {props.count}</span> </div>
                 <div className="col-2"> Top Score :{props.topCount} </div>
             </div>
