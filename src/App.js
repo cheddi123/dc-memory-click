@@ -25,7 +25,7 @@ class App extends React.Component {
 		Images,
 		message: 'Click the image',
 	};
- 
+
 	//function to handle the click event
 	handleClick = id => {
 		const newScore = this.state.count + 1;
@@ -82,20 +82,15 @@ class App extends React.Component {
 		this.setState({ Images: rearrangedImages });
 	};
 
-	//
 	// The render method returns the JSX that should be rendered
-  render() 
-  {
-    console.log(Images.length)
-    console.log(Images[2].img)
+	render() {
+		console.log(Images.length);
+		console.log(Images[2].img);
 		return (
 			<Wrapper>
-				<div className="card text-center">
-					<Header count={this.state.count} topCount={this.state.topScore} alertMessage={this.state.message} />
-					<div className="card-header bg-primary text-white">
-						<Title />
-					</div>
-				</div>
+				<Header count={this.state.count} topCount={this.state.topScore} alertMessage={this.state.message} />
+				<Title />
+
 				<div className="container">
 					{this.state.Images.map(image => (
 						<span className="container padding img-fluid " key={image.id}>
