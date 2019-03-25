@@ -1,40 +1,44 @@
+const Images = [
+	{ id: 1, img: '/img/woman1.jpg', isClicked: false },
+	{ id: 2, img: '/img/wonderwoman.jpg', isClicked: false },
+	{ id: 3, img: '/img/ironman.jpg', isClicked: false },
+	{
+		id: 4,
+		img: '/img/flash.png',
+		isClicked: false,
+	},
+	{
+		id: 5,
+		img: '/img/batman.jpg',
+		isClicked: false,
+	},
+	{ id: 6, img: '/img/newflash.jpg', isClicked: false },
+	{ id: 7, img: '/img/hulk.jpg', isClicked: false },
+	{
+		id: 8,
+		img: '/img/harleyquinn.jpg',
+		isClicked: false,
+    },
+    {
+		id: 9,
+		img: '/img/cyborg.png',
+		isClicked: false,
+    },
+    {
+		id: 10,
+		img: '/img/superman.png',
+		isClicked: false,
+    },
+    {
+		id: 11,
+		img: '/img/nightwing.png',
+		isClicked: false,
+    },
+    {
+		id: 12,
+		img: '/img/darkside.png',
+		isClicked: false,
+	},
+];
 
-
-
-const Images= [
-{   id:1,
-    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO_fENWbvzs7ZRjXveE68Z6um7TBHPglpLvUnS9p_cKGbpgx94PA",
-    isClicked:false
-},
-{   id:2,
-    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLjKrtLvSjy_ZvU1pJu2VJaOq3RMJVoVGyqrkoxHz1lAJtoX5oSg",
-    isClicked:false
-},
-{   id:3,
-    img:"/img/ironman.jpg",
-    isClicked:false
-},
-{   id:4,
-    img:"https://www.thoughtco.com/thmb/Np-PirWT0_YmSyeV4Coj_7L-xMQ=/600x431/filters:no_upscale():max_bytes(150000):strip_icc()/captainmarvel22-58babd183df78c353c433e34.jpg",
-    isClicked:false
-},
-{   id:5,
-    img:"https://static01.nyt.com/images/2018/09/21/watching/batman-the-animated-series-watching/21dc-stream-slide-H1MA-videoSixteenByNineJumbo1600.jpg",
-    isClicked:false
-},
-{   id:6,
-    img:"https://i.pinimg.com/originals/90/9f/6d/909f6d6454222c40acd5332c9fe56567.jpg",
-    isClicked:false
-},
-{   id:7,
-    img:"/img/hulk.jpg",
-    isClicked:false
-},
-{   id:8,
-    img:"https://pixel.nymag.com/imgs/daily/vulture/2015/02/11/harley-quinn/13-harley-quinn.w700.h700.jpg",
-    isClicked:false
-},
-
-]
-
-export default Images
+export default Images;

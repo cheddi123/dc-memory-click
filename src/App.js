@@ -98,7 +98,7 @@ class App extends React.Component {
 				</div>
 				<div className="container">
 					{this.state.Images.map(image => (
-						<span className="container padding " key={image.id}>
+						<span className="container padding img-fluid " key={image.id}>
 							<button className="btn btn-danger grow padding">
 								{''}
 
